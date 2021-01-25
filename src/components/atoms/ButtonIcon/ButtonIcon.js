@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../../../context/ThemeContext';
 import styles from './ButtonIcon.module.scss'
 
-const ButtonIcon = ({icon, addItemIcon = false }) => {
+const ButtonIcon = ({icon, addItemIcon = false, onClick }) => {
 
   const {colorTheme} = useContext(ThemeContext)
 
@@ -15,7 +15,7 @@ const ButtonIcon = ({icon, addItemIcon = false }) => {
   }
 
   return (
-    <button style={addItemIcon ? styleForButtonAddIcon : styleForButtonIcon} className={styles.buttonIcon}></button>
+    <button onClick={onClick} style={addItemIcon ? styleForButtonAddIcon : styleForButtonIcon} className={styles.buttonIcon}></button>
    );
 }
  

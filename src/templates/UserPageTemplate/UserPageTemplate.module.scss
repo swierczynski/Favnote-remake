@@ -4,4 +4,12 @@
 
 .content {
   margin-left: 200px;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
 }

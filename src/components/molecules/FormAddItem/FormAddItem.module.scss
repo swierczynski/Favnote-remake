@@ -1,0 +1,44 @@
+.outsideForm {
+  position: fixed;
+  background-color: #fff;
+  width: 500px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  h2 {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    height: 80%;
+
+    textarea {
+      min-height: 300px;
+      border-radius: 20px;
+    }
+
+    .inside {
+      flex-grow: 1;
+    }
+
+    button {
+      margin-bottom: 120px;
+      width: 70%;
+    }
+
+  }
+
+  form * {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

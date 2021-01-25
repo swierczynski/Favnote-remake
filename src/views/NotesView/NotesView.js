@@ -1,19 +1,26 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
-import ButtonIcon from '../../components/atoms/ButtonIcon/ButtonIcon';
-import { routes } from '../../routes';
-import bulbIcon from '../../assets/icons/bulb.svg'
-import Button from '../../components/atoms/Button/Button';
 import UserPageTemplate from '../../templates/UserPageTemplate/UserPageTemplate';
+import Card from '../../components/molecules/Card/Card';
+import { connect } from 'react-redux'
 
-const NotesView = () => {
+const NotesView = ({notes}) => {
 
+  const allNotes = notes.map(note => <li> <Card key={note.id} {...note} /> </li>)
 
   return ( 
     <UserPageTemplate>
-      <p>jgirjgirjgi</p>
+      <ul>
+     {allNotes}
+     </ul>
     </UserPageTemplate>
    );
 }
+
+const mapStateToProps = (state) => ({
+  notes : state.notes
+})
+
+
+const NoteViewConsumer = connect(mapStateToProps)(NotesView)
  
-export default NotesView;
+export default NoteViewConsumer;

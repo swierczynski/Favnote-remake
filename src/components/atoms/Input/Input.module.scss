@@ -1,0 +1,11 @@
+.input {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+
+  ::placeholder {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: grey;
+  }
+}

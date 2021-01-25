@@ -1,0 +1,36 @@
+.outsideCard {
+  margin: 10px;
+  width: 400px;
+  box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+
+  .heading {
+    padding: 10px;
+    position: relative;
+  }
+
+
+  .cardWrapper {
+    display: flex;
+    flex-direction: column;
+
+    div.wrapperCardInside {
+      display: flex;
+      flex-direction: column;
+      min-height: 400px;
+    }
+
+    p {
+      padding: 10px;
+      line-height: 160%;
+      flex-grow: 1;
+      margin-top: 10px;
+    }
+
+    button {
+      align-self: flex-start;
+      margin: 10px;
+    }
+  }
+}
