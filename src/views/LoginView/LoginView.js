@@ -22,7 +22,8 @@ const LoginView = () => {
     if(loginForm === 'kamil' && passwordForm === 'pieczarkowa') {
       setIsAuthorised(true)
     } else {
-      setMessageForm('niepoprawny login lub hasło')
+      if(loginForm ==='' || passwordForm === '' ) return setMessageForm('firstly sign in to app'.toUpperCase())
+      setMessageForm('invalid login or password'.toUpperCase())
     }
   }
 
