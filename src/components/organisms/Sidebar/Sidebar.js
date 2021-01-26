@@ -10,11 +10,13 @@ import { routes } from '../../../routes';
 import { ThemeContext } from '../../../context/ThemeContext';
 import logo from '../../../assets/icons/logo.svg'
 import { PageContext } from '../../../context/PageContext';
+import { AuthContext } from '../../../context/AuthContext';
 
 const Sidebar = () => {
 
   const {colorTheme} = useContext(ThemeContext);
-  const { pageType } = useContext(PageContext)
+  const { pageType } = useContext(PageContext);
+  const { setIsAuthorised } = useContext(AuthContext)
 
 
   const styleForNavigation = {
@@ -48,7 +50,7 @@ const Sidebar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink activeClassName={styles.active} to={routes.login}>
+          <NavLink activeClassName={styles.active} onClick={()=> setIsAuthorised(false)} to={routes.login}>
             <ButtonIcon icon={logoutIcon} />
           </NavLink>
         </li>

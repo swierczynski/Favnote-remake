@@ -1,0 +1,29 @@
+.heading {
+  padding: 10px;
+  position: relative;
+}
+
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  div.wrapperCardInside {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+  }
+
+  p {
+    padding: 10px;
+    line-height: 180%;
+    flex-grow: 1;
+    margin-top: 20px;
+  }
+
+  button {
+    align-self: flex-start;
+    margin: 10px;
+  }
+}

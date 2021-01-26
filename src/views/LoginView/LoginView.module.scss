@@ -1,0 +1,28 @@
+.wrapper {
+  height: 100vh;
+}
+
+.insideWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+
+  img {
+    margin-bottom: 60px;
+    height: 20%;
+  }
+
+  form {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    & * {
+      margin-bottom: 15px;
+    }
+  }
+}

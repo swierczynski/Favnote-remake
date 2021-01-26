@@ -9,7 +9,7 @@ const PageContextProvider = ({children, location}) => {
   const [pageType, setPageType] = useState('notes');
 
   useEffect(()=> {
-    const pageTypes = ['twitters', 'articles', 'notes'];
+    const pageTypes = ['twitters', 'articles', 'notes', 'login'];
     let currentPage = pageTypes.filter(page => location.pathname.includes(page));
 
     currentPage = currentPage[0]

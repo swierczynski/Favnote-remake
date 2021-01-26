@@ -26,7 +26,9 @@ const Root = () => {
       <Route exact path={routes.notes} component={NotesView} />
       <Route exact path={routes.twitters} component={TwittersView} />
       <Route exact path={routes.articles} component={ArticlesView} />
-      <Route path={routes.article || routes.note || routes.twitter} component={DetailsView} />
+      <Route path={routes.article } component={DetailsView} />
+      <Route path={routes.twitter } component={DetailsView} />
+      <Route path={routes.note } component={DetailsView} />
       </>
       </Switch>
     </MainTemplate>
